@@ -4,12 +4,11 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import Table from './jsx/Table';
-import Dash from './jsx/Dash';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Dash/>
+    <Table/>
   </React.StrictMode>
 );
 
