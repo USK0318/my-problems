@@ -1,6 +1,6 @@
 import '../css/dash.css'
 import React, { useEffect } from 'react';
-import Chart from 'chart.js';
+import {Chart} from 'chart.js';
 
 
 
