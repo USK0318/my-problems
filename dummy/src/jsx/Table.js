@@ -24,6 +24,9 @@ function Table() {
     newData[index].name = editName;
     setData(newData);
     setEditIndex(null);
+    console.log(`the data is`,data)
+    console.log(`the index`,editIndex)
+
   };
 
   const handleCancelClick = () => {
