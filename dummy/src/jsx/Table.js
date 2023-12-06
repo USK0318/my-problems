@@ -85,9 +85,7 @@ function Table() {
                         value={editName}
                         onChange={(e) => setEditName(e.target.value)}
                       />
-                    ) : (
-                      row.name
-                    )}
+                    ) : (row.name)}
                   </td>
                   <td>{row.number}</td>
                   <td>{row.email}</td>
