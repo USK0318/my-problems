@@ -23,15 +23,13 @@ connection.connect((err) => {
 });
 
 // Define a route to fetch data from the database
-app.get('/api/data', (req, res) => {
-  // Perform a query to fetch data (replace with your own query)
+app.get('/', (req, res) => {
   connection.query('SELECT * FROM CPRO', (err, results) => {
     if (err) {
       console.error('Error executing query:', err);
       res.status(500).json({ error: 'Internal Server Error' });
       return;
-    }
-  
+    }  
     console.log('Query results:', results);
   
     // Send the fetched data as an API response
