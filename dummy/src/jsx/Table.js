@@ -5,12 +5,13 @@ import '../css/table.css';
 import CancelIcon from '@mui/icons-material/Cancel';
 
 function Table() {
-  const initialData = [
-    { id: 1, name: 'John Doe', number: '1234567890', email: 'john@example.com', fatherName: 'John Doe' },
-    // Add other data objects as needed
-  ];
 
-  const [data, setData] = useState(initialData);
+  useEffect(()=>{axios.get('http://127.0.0.1:3000/info/').then(
+      (res)=>{setData(res.data)}).catch(
+          (a)=>{console.log(a)})},[])
+
+
+  const [data, setData] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
   const [editName, setEditName] = useState('');
 
